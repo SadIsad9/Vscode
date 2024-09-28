@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<div id="output"></div>
+
+<script>
+function tanyaNama(){
+  let nama = prompt("siapa nama kamu?");
+  if (nama) {
+    document.getElementById('output').innerHTML = `
+     <marquee> <h1 style="color: blue;">Halo ${nama}!</h1> </marquee>
+      <p style="color:black; font-size:1rem;">Pilih nomor 1 atau 2:</p>
+      <button style="width:50px; height:50px; border-radius:5px; color:white; background-color:pink; border-color:white;" onclick="pilihNomor(1)"> 1</button>
+      <button style="width:50px; height:50px; border-radius:5px; color:white; background-color:pink; border-color:white;" onclick="pilihNomor(2)"> 2</button> <p>jangan sampai salah pilihh!!</p>
+    `;
+  } else {
+    alert('Kamu belum memasukan nama!!!');
+  }
+}
+
+function pilihNomor(nomor) {
+  if (nomor === 1) {
+    window.location.href = 'ya.html'; // arahkan ke halaman1.html
+  } else if (nomor === 2) {
+    window.location.href = 'halaman2.html'; // arahkan ke halaman2.html
+  }
+}
+
+// Panggil fungsi tanyaNama saat halaman dimuat
+tanyaNama();
+</script>
+
+</body>
+</html>
